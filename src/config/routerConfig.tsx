@@ -28,6 +28,22 @@ const routerConfig = createBrowserRouter([
         path: Path.BookingComplete,
         element: <div>Booking Complete</div>,
       },
+      {
+        path: Path.Discover,
+        element: <div>Discover</div>,
+      },
+      {
+        path: Path.Activities,
+        element: <div>Activities</div>,
+      },
+      {
+        path: Path.About,
+        element: <div>About</div>,
+      },
+      {
+        path: Path.Contact,
+        element: <div>Contact</div>,
+      },
     ],
   },
   {

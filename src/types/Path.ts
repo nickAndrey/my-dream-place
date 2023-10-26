@@ -7,6 +7,10 @@ enum Path {
   SignIn = '/sign-in',
   SignUp = '/sign-up',
   ForgotPassword = '/forgot-password',
+  Discover = '/discover',
+  Activities = '/activities',
+  About = '/about',
+  Contact = '/contact',
 }
 
 export default Path;
