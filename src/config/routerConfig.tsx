@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
+import Home from '../pages/Home/Home';
 import Path from '../types/Path';
 
 const routerConfig = createBrowserRouter([
@@ -9,7 +10,7 @@ const routerConfig = createBrowserRouter([
     errorElement: <div>404 Not Found</div>,
     children: [
       {
-        element: <div>Home</div>,
+        element: <Home />,
         index: true,
       },
       {

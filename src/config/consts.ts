@@ -1,0 +1,3 @@
+const BASE_LAYOUT_WIDTH = 1240;
+
+export { BASE_LAYOUT_WIDTH };

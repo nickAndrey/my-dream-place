@@ -3,6 +3,7 @@ import { Header as HeaderContainer } from 'antd/es/layout/layout';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { ReactComponent as Logo } from '../assets/images/myDreamPlaceLogo.svg';
+import { BASE_LAYOUT_WIDTH } from '../config/consts';
 import Path from '../types/Path';
 
 const items = [
@@ -41,7 +42,7 @@ const ContainerStyle: CSSProperties = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  maxWidth: '1240px',
+  maxWidth: BASE_LAYOUT_WIDTH,
   width: '100%',
   margin: '0 auto',
 };
@@ -61,7 +62,13 @@ const Header: FC = () => {
         <NavLink to={Path.Home} style={LogoLinkStyle}>
           <Logo />
         </NavLink>
-        <Menu theme='light' mode='horizontal' items={items} selectedKeys={[activeKey]} />
+
+        <Menu
+          theme='light'
+          mode='horizontal'
+          items={items}
+          selectedKeys={[activeKey]}
+        />
 
         <Flex align='center' gap='small'>
           <Button size='middle'>Register</Button>
