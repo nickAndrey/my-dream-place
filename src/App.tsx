@@ -1,24 +1,20 @@
 import { Layout } from 'antd';
-import { Content, Footer as FooterContainer } from 'antd/es/layout/layout';
+import { Content } from 'antd/es/layout/layout';
 import { CSSProperties } from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 const LayoutStyle: CSSProperties = {
   display: 'grid',
   gridTemplateRows: 'auto 1fr auto',
   minHeight: '100%',
-};
-
-const FooterStyle: CSSProperties = {
   backgroundColor: '#fff',
-  padding: 0,
 };
 
 const ContentStyle: CSSProperties = {
   padding: 0,
   margin: 0,
-  backgroundColor: '#fff',
 };
 
 function App() {
@@ -28,7 +24,7 @@ function App() {
       <Content style={ContentStyle}>
         <Outlet />
       </Content>
-      <FooterContainer style={FooterStyle}>Footer</FooterContainer>
+      <Footer />
     </Layout>
   );
 }

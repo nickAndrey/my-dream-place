@@ -83,7 +83,9 @@ const Home: FC = () => {
             Plan and book our perfect trip with expert advice, travel tips,
             destination information and inspiration from us
           </Text>
-          <Flex gap='middle'>{renderCards(vacations)}</Flex>
+          <Flex gap='middle' style={{ marginTop: 40 }}>
+            {renderCards(vacations)}
+          </Flex>
         </section>
 
         <section>

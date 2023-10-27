@@ -13,10 +13,6 @@ const SearchFilterGroupStyle: CSSProperties = {
   borderRadius: 8,
 };
 
-const InputStyle: CSSProperties = {
-  // backgroundColor: '#f2f2f2',
-};
-
 type SearchFilterGroupProps = {
   destination: {
     value: string;
@@ -52,13 +48,11 @@ const SearchFilterGroup: FC<SearchFilterGroupProps> = ({
       />
       <DatePicker
         placeholder='Check in date'
-        style={InputStyle}
         onChange={checkin.onChange}
         suffixIcon={<CalendarIcon />}
       />
       <DatePicker
         placeholder='Check out date'
-        style={InputStyle}
         onChange={checkout.onChange}
         suffixIcon={<CalendarIcon />}
       />
