@@ -7,7 +7,7 @@ import Header from './components/Header';
 const LayoutStyle: CSSProperties = {
   display: 'grid',
   gridTemplateRows: 'auto 1fr auto',
-  height: '100%',
+  minHeight: '100%',
 };
 
 const FooterStyle: CSSProperties = {
@@ -18,6 +18,7 @@ const FooterStyle: CSSProperties = {
 const ContentStyle: CSSProperties = {
   padding: 0,
   margin: 0,
+  backgroundColor: '#fff',
 };
 
 function App() {

@@ -1,8 +1,8 @@
 import { Button, DatePicker, DatePickerProps, Input } from 'antd';
 import { CSSProperties, ChangeEvent, FC } from 'react';
-import { ReactComponent as CalendarIcon } from '../assets/images/calendar.svg';
-import { ReactComponent as GuestsIcon } from '../assets/images/guests.svg';
-import { ReactComponent as MapPinIcon } from '../assets/images/mapPin.svg';
+import { ReactComponent as CalendarIcon } from '../assets/icons/calendar.svg';
+import { ReactComponent as GuestsIcon } from '../assets/icons/guests.svg';
+import { ReactComponent as MapPinIcon } from '../assets/icons/mapPin.svg';
 
 const SearchFilterGroupStyle: CSSProperties = {
   display: 'grid',

@@ -1,18 +1,18 @@
 import { Flex } from 'antd';
 import Title from 'antd/es/typography/Title';
 import { CSSProperties, FC, ReactNode } from 'react';
-import bannerSrc from '../../assets/images/banner-home.jpg';
+import BannerWithFiltersSrc from '../../assets/images/banner-home.jpg';
 
-const BannerStyle: CSSProperties = {
+const BannerWithFiltersStyle: CSSProperties = {
   position: 'relative',
   width: '100%',
   height: 500,
-  backgroundImage: `url(${bannerSrc})`,
+  backgroundImage: `url(${BannerWithFiltersSrc})`,
   backgroundPosition: 'center',
   backgroundSize: 'cover',
 };
 
-const BannerTextStyle: CSSProperties = {
+const BannerWithFiltersTextStyle: CSSProperties = {
   maxWidth: 650,
   textAlign: 'center',
 };
@@ -27,18 +27,24 @@ const FiltersContainerStyle: CSSProperties = {
   transform: 'translate(0, 50%)',
   maxWidth: 1030,
   width: '100%',
+  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+  borderRadius: 8,
 };
 
-type BannerProps = {
+type BannerWithFiltersProps = {
   title: string;
   subtitle: string;
   filters: ReactNode;
 };
 
-const Banner: FC<BannerProps> = ({ title, subtitle, filters }) => {
+const BannerWithFilters: FC<BannerWithFiltersProps> = ({
+  title,
+  subtitle,
+  filters,
+}) => {
   return (
-    <Flex justify='center' align='center' style={BannerStyle}>
-      <div style={BannerTextStyle}>
+    <Flex justify='center' align='center' style={BannerWithFiltersStyle}>
+      <div style={BannerWithFiltersTextStyle}>
         <Title level={2} style={TextStyle}>
           {title}
         </Title>
@@ -52,4 +58,4 @@ const Banner: FC<BannerProps> = ({ title, subtitle, filters }) => {
   );
 };
 
-export default Banner;
+export default BannerWithFilters;

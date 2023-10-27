@@ -2,7 +2,7 @@ import { Button, Flex, Menu } from 'antd';
 import { Header as HeaderContainer } from 'antd/es/layout/layout';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { ReactComponent as Logo } from '../assets/images/myDreamPlaceLogo.svg';
+import { ReactComponent as Logo } from '../assets/icons/myDreamPlaceLogo.svg';
 import { BASE_LAYOUT_WIDTH } from '../config/consts';
 import Path from '../types/Path';
 
