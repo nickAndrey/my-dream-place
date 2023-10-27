@@ -4,6 +4,7 @@ import SearchFilterGroup from '../../components/SearchFilterGroup';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 import BannerWithFilters from './BannerWithFilters';
 import Card from './Card';
+import DownloadMobileAppBanner from './DownloadMobileAppBanner';
 import { hotels, trips, vacations } from './data';
 
 const { Title, Text } = Typography;
@@ -73,7 +74,7 @@ const Home: FC = () => {
 
       <Space
         direction='vertical'
-        size='middle'
+        size='large'
         style={{ display: 'flex', paddingTop: 80 }}
       >
         <section>
@@ -94,6 +95,8 @@ const Home: FC = () => {
           <Title level={3}>Popular hotels</Title>
           <Flex gap='middle'>{renderCards(hotels)}</Flex>
         </section>
+
+        <DownloadMobileAppBanner style={{ marginTop: 40 }} />
       </Space>
     </div>
   );
