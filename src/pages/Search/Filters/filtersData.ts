@@ -1,17 +1,17 @@
-type Filter = {
+type FilterType = {
   id: number;
   value: string | number | number[];
   label: string;
 };
 
-type Filters = {
-  budget: Filter[];
-  rating: Filter[];
-  popular: Filter[];
-  activities: Filter[];
+type FiltersDataType = {
+  budget: FilterType[];
+  rating: FilterType[];
+  popular: FilterType[];
+  activities: FilterType[];
 };
 
-const filters: Filters = {
+const filtersData: FiltersDataType = {
   budget: [
     { id: 0, value: [0, 200], label: '$0 - $200' },
     { id: 1, value: [200, 500], label: '$200 - $500' },
@@ -48,7 +48,7 @@ const filters: Filters = {
   ],
 };
 
-const createQuery = (filters: Filter[], name: string) => {
+const createQuery = (filters: FilterType[], name: string) => {
   return filters
     .map(
       (filter) =>
@@ -59,12 +59,12 @@ const createQuery = (filters: Filter[], name: string) => {
     .join('&');
 };
 
-const convertToSearchQuery = (filters: {
+const convertSelectedFiltersToSearchQuery = (filters: {
   search: string;
   rating: number;
-  budget: Filter[];
-  popular: Filter[];
-  activities: Filter[];
+  budget: FilterType[];
+  popular: FilterType[];
+  activities: FilterType[];
 }): string => {
   const { search, budget, popular, activities, rating } = filters;
 
@@ -80,6 +80,6 @@ const convertToSearchQuery = (filters: {
   return `search=${search}${query !== '' ? `&${query}` : ''}`;
 };
 
-export default filters;
-export { convertToSearchQuery };
-export type { Filter };
+export default filtersData;
+export { convertSelectedFiltersToSearchQuery };
+export type { FilterType, FiltersDataType };
