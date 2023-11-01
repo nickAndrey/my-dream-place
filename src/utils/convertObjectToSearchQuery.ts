@@ -1,4 +1,4 @@
-const objectToQueryString = (obj: Record<string, any>) => {
+const convertObjectToQueryString = (obj: Record<string, any>) => {
   const keyValuePairs = [];
 
   for (const key in obj) {
@@ -9,4 +9,4 @@ const objectToQueryString = (obj: Record<string, any>) => {
   return keyValuePairs.join('&');
 };
 
-export default objectToQueryString;
+export default convertObjectToQueryString;

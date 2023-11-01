@@ -4,7 +4,7 @@ import { CSSProperties, FC, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 
-import convertSelectedFiltersToSearchQuery from '../../utils/convertObjectToSearchQuery';
+import convertObjectToQueryString from '../../utils/convertObjectToSearchQuery';
 import Filters from './Filters/Filters';
 import filtersData, { FilterType } from './Filters/filtersData';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
@@ -52,21 +52,21 @@ const Search: FC = () => {
   useEffect(() => {
     if (!location.state) return;
 
-    console.log(convertSelectedFiltersToSearchQuery(location.state));
+    console.log(convertObjectToQueryString(location.state));
   }, [location]);
 
   // TODO: make a request to the server to get the search results in real time
-  useEffect(() => {
-    console.log(
-      convertSelectedFiltersToSearchQuery({
-        search,
-        budget,
-        popular,
-        activities,
-        rating,
-      }),
-    );
-  }, [search, budget, popular, activities, rating]);
+  // useEffect(() => {
+  //   console.log(
+  //     convertObjectToQueryString({
+  //       search,
+  //       budget,
+  //       popular,
+  //       activities,
+  //       rating,
+  //     }),
+  //   );
+  // }, [search, budget, popular, activities, rating]);
 
   return (
     <div style={SearchContainerStyle}>

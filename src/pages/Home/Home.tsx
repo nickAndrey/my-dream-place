@@ -29,12 +29,6 @@ const Home: FC = () => {
     });
   };
 
-  const onCardClick = (card: any) => {
-    navigate('/search', {
-      state: { card },
-    });
-  };
-
   const renderCards = (data: any[]) =>
     data.map((item) => (
       <Card
@@ -42,7 +36,7 @@ const Home: FC = () => {
         title={item.title}
         propertiesAmount={item.propertiesAmount}
         image={item.image}
-        onClick={() => onCardClick(item)}
+        onClick={() => navigate('/search', { state: { title: item.title } })}
       >
         {item.subtitle && (
           <>
