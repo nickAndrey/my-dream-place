@@ -96,7 +96,7 @@ const Search: FC = () => {
         <Button
           style={{ width: 'fit-content', margin: '0 auto' }}
           size='large'
-          type='dashed'
+          type='primary'
           onClick={onLoadMoreResults}
         >
           Load more results
