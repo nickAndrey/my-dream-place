@@ -1,5 +1,6 @@
-import { Flex, Space, Typography } from 'antd';
+import { Flex, Typography } from 'antd';
 import { FC, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SearchFilterGroup from '../../components/SearchFilterGroup';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 import BannerWithFilters from './BannerWithFilters';
@@ -10,13 +11,28 @@ import { hotels, trips, vacations } from './data';
 const { Title, Text } = Typography;
 
 const Home: FC = () => {
+  const navigate = useNavigate();
+
   const [location, setLocation] = useState('');
   const [checkInDate, setCheckinDate] = useState('');
   const [checkOutDate, setCheckoutDate] = useState('');
   const [guests, setGuests] = useState('');
 
   const onSearch = () => {
-    console.log({ location, checkInDate, checkOutDate, guests });
+    navigate('/search', {
+      state: {
+        location,
+        checkInDate,
+        checkOutDate,
+        guests,
+      },
+    });
+  };
+
+  const onCardClick = (card: any) => {
+    navigate('/search', {
+      state: { card },
+    });
   };
 
   const renderCards = (data: any[]) =>
@@ -26,7 +42,7 @@ const Home: FC = () => {
         title={item.title}
         propertiesAmount={item.propertiesAmount}
         image={item.image}
-        onClick={() => console.log('Card clicked')}
+        onClick={() => onCardClick(item)}
       >
         {item.subtitle && (
           <>
@@ -72,34 +88,30 @@ const Home: FC = () => {
         }
       />
 
-      <Space
-        direction='vertical'
-        size='large'
-        style={{ display: 'flex', paddingTop: 80 }}
-      >
+      <Flex vertical gap='large' style={{ paddingTop: 80 }}>
         <section>
           <Title level={3}>Enjoy your dream vacation</Title>
           <Text>
             Plan and book our perfect trip with expert advice, travel tips,
             destination information and inspiration from us
           </Text>
-          <Flex gap='middle' style={{ marginTop: 40 }}>
+          <Flex justify='space-between' style={{ marginTop: 40 }}>
             {renderCards(vacations)}
           </Flex>
         </section>
 
         <section>
           <Title level={3}>Get inspiration for your next trip</Title>
-          <Flex gap='middle'>{renderCards(trips)}</Flex>
+          <Flex justify='space-between'>{renderCards(trips)}</Flex>
         </section>
 
         <section>
           <Title level={3}>Popular hotels</Title>
-          <Flex gap='middle'>{renderCards(hotels)}</Flex>
+          <Flex justify='space-between'>{renderCards(hotels)}</Flex>
         </section>
 
         <DownloadMobileAppBanner style={{ marginTop: 40 }} />
-      </Space>
+      </Flex>
     </div>
   );
 };

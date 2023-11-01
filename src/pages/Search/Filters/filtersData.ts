@@ -48,38 +48,5 @@ const filtersData: FiltersDataType = {
   ],
 };
 
-const createQuery = (filters: FilterType[], name: string) => {
-  return filters
-    .map(
-      (filter) =>
-        `${name}[${filter.id}]=${
-          Array.isArray(filter.value) ? filter.value.join('-') : filter.value
-        }`,
-    )
-    .join('&');
-};
-
-const convertSelectedFiltersToSearchQuery = (filters: {
-  search: string;
-  rating: number;
-  budget: FilterType[];
-  popular: FilterType[];
-  activities: FilterType[];
-}): string => {
-  const { search, budget, popular, activities, rating } = filters;
-
-  const budgetQuery = createQuery(budget, 'budget');
-  const popularQuery = createQuery(popular, 'popular');
-  const activitiesQuery = createQuery(activities, 'activities');
-  const ratingQuery = `rating=${rating}`;
-
-  const query = [budgetQuery, popularQuery, activitiesQuery, ratingQuery]
-    .filter((q) => q !== '')
-    .join('&');
-
-  return `search=${search}${query !== '' ? `&${query}` : ''}`;
-};
-
 export default filtersData;
-export { convertSelectedFiltersToSearchQuery };
 export type { FilterType, FiltersDataType };

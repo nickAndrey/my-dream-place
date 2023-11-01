@@ -1,12 +1,12 @@
 import { Button, Flex, Typography } from 'antd';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 
+import { useLocation } from 'react-router-dom';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
+
+import convertSelectedFiltersToSearchQuery from '../../utils/convertObjectToSearchQuery';
 import Filters from './Filters/Filters';
-import filtersData, {
-  FilterType,
-  convertSelectedFiltersToSearchQuery,
-} from './Filters/filtersData';
+import filtersData, { FilterType } from './Filters/filtersData';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
 import placesToBook, { splitPlacesToBookIntoChunks } from './placesData';
 
@@ -24,6 +24,8 @@ const SearchContainerStyle: CSSProperties = {
 const ITEMS_PER_PAGE = 10;
 
 const Search: FC = () => {
+  const location = useLocation();
+
   const [search, setSearch] = useState<string>('');
   const [budget, setBudget] = useState<FilterType[]>([]);
   const [popular, setPopular] = useState<FilterType[]>([]);
@@ -46,6 +48,14 @@ const Search: FC = () => {
     setSearchResults([...searchResults, ...nextChunk]);
   };
 
+  // TODO: make a request to the server to get the search results
+  useEffect(() => {
+    if (!location.state) return;
+
+    console.log(convertSelectedFiltersToSearchQuery(location.state));
+  }, [location]);
+
+  // TODO: make a request to the server to get the search results in real time
   useEffect(() => {
     console.log(
       convertSelectedFiltersToSearchQuery({
