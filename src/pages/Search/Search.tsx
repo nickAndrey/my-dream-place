@@ -30,24 +30,7 @@ const Search: FC = () => {
 
   const [searchResults, setSearchResults] = useState(placesToBook);
 
-  useEffect(() => {
-    const getImages = async () => {
-      const images = await fetch(
-        `${process.env.REACT_APP_IMAGE_API_URL}?key=${process.env.REACT_APP_IMAGE_API_KEY}&q=australia&image_type=photo&pretty=true&per_page=20`,
-      );
-
-      const imagesData = await images.json();
-
-      setSearchResults(
-        placesToBook.map((place, index) => ({
-          ...place,
-          image: imagesData.hits[index].largeImageURL,
-        })),
-      );
-    };
-
-    getImages();
-  }, []);
+  useEffect(() => {}, []);
 
   useEffect(() => {
     console.log(
