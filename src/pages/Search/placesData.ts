@@ -1,4 +1,4 @@
-interface Place {
+type Place = {
   id: number;
   name: string;
   location: string;
@@ -12,7 +12,7 @@ interface Place {
   rating: number;
   type: 'hotel' | 'apartment' | 'hostel' | 'house';
   description: string;
-}
+};
 
 const placesToBook: Place[] = [
   {
@@ -357,5 +357,20 @@ const getAmountOfPlacesByPriceRange = (min: number, max: number) => {
   ).length;
 };
 
+const splitPlacesToBookIntoChunks = (places: Place[], chunkSize: number) => {
+  const chunkedPlaces = [];
+
+  for (let i = 0; i < places.length; i += chunkSize) {
+    chunkedPlaces.push(places.slice(i, i + chunkSize));
+  }
+
+  return chunkedPlaces; // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+};
+
 export default placesToBook;
-export { filtersFunctions, getAmountOfPlacesByPriceRange };
+export {
+  filtersFunctions,
+  getAmountOfPlacesByPriceRange,
+  splitPlacesToBookIntoChunks,
+};
+export type { Place };
