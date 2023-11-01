@@ -1,4 +1,4 @@
-import { Flex } from 'antd';
+import { Flex, Typography } from 'antd';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
@@ -7,6 +7,10 @@ import filtersData, {
   FilterType,
   convertSelectedFiltersToSearchQuery,
 } from './Filters/filtersData';
+import SearchResultItem from './SearchResultItem/SearchResultItem';
+import placesToBook from './placesData';
+
+const { Title } = Typography;
 
 const SearchContainerStyle: CSSProperties = {
   maxWidth: BASE_LAYOUT_WIDTH,
@@ -23,6 +27,27 @@ const Search: FC = () => {
   const [popular, setPopular] = useState<FilterType[]>([]);
   const [activities, setActivities] = useState<FilterType[]>([]);
   const [rating, setRating] = useState<number>(0);
+
+  const [searchResults, setSearchResults] = useState(placesToBook);
+
+  useEffect(() => {
+    const getImages = async () => {
+      const images = await fetch(
+        `${process.env.REACT_APP_IMAGE_API_URL}?key=${process.env.REACT_APP_IMAGE_API_KEY}&q=australia&image_type=photo&pretty=true&per_page=20`,
+      );
+
+      const imagesData = await images.json();
+
+      setSearchResults(
+        placesToBook.map((place, index) => ({
+          ...place,
+          image: imagesData.hits[index].largeImageURL,
+        })),
+      );
+    };
+
+    getImages();
+  }, []);
 
   useEffect(() => {
     console.log(
@@ -51,7 +76,26 @@ const Search: FC = () => {
         search={search}
         setSearch={setSearch}
       />
-      <Flex vertical>column 2</Flex>
+
+      <Flex vertical gap='middle'>
+        <Title level={2} style={{ margin: 0 }}>
+          Search Results
+        </Title>
+
+        {searchResults.map((place) => (
+          <SearchResultItem
+            key={place.id}
+            title={place.name}
+            rating={place.rating}
+            description={place.description}
+            price={place.price}
+            duration={2}
+            location={place.location}
+            image={place.image}
+            onItemClicked={() => {}}
+          />
+        ))}
+      </Flex>
     </div>
   );
 };

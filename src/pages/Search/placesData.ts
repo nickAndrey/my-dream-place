@@ -9,8 +9,9 @@ interface Place {
   bathrooms: number;
   image: string;
   availableFrom: string;
-  rating: string;
+  rating: number;
   type: 'hotel' | 'apartment' | 'hostel' | 'house';
+  description: string;
 }
 
 const placesToBook: Place[] = [
@@ -25,8 +26,10 @@ const placesToBook: Place[] = [
     bathrooms: 1.5,
     image: 'cabin.jpg',
     availableFrom: '2023-11-15',
-    rating: '4.5',
+    rating: 4.5,
     type: 'hostel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 2,
@@ -39,8 +42,10 @@ const placesToBook: Place[] = [
     bathrooms: 4,
     image: 'villa.jpg',
     availableFrom: '2023-12-01',
-    rating: '4.8',
+    rating: 4.8,
     type: 'apartment',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 3,
@@ -53,8 +58,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'bungalow.jpg',
     availableFrom: '2023-11-20',
-    rating: '4.9',
+    rating: 4.9,
     type: 'apartment',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 4,
@@ -67,8 +74,10 @@ const placesToBook: Place[] = [
     bathrooms: 2,
     image: 'chalet.jpg',
     availableFrom: '2023-11-25',
-    rating: '4.7',
+    rating: 4.7,
     type: 'apartment',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 5,
@@ -81,8 +90,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'cottage.jpg',
     availableFrom: '2023-11-30',
-    rating: '4.6',
+    rating: 4.6,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 6,
@@ -95,8 +106,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'loft.jpg',
     availableFrom: '2023-11-15',
-    rating: '4.4',
+    rating: 4.4,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 7,
@@ -109,8 +122,10 @@ const placesToBook: Place[] = [
     bathrooms: 2,
     image: 'farmhouse.jpg',
     availableFrom: '2023-12-05',
-    rating: '4.9',
+    rating: 4.9,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 8,
@@ -123,8 +138,10 @@ const placesToBook: Place[] = [
     bathrooms: 1.5,
     image: 'apartment.jpg',
     availableFrom: '2023-11-28',
-    rating: '4.5',
+    rating: 4.5,
     type: 'house',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 9,
@@ -137,8 +154,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'oasis.jpg',
     availableFrom: '2023-11-18',
-    rating: '4.7',
+    rating: 4.7,
     type: 'house',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 10,
@@ -151,8 +170,10 @@ const placesToBook: Place[] = [
     bathrooms: 2.5,
     image: 'ski-lodge.jpg',
     availableFrom: '2023-12-10',
-    rating: '4.6',
+    rating: 4.6,
     type: 'house',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 11,
@@ -165,8 +186,10 @@ const placesToBook: Place[] = [
     bathrooms: 3,
     image: 'beach-house.jpg',
     availableFrom: '2023-11-23',
-    rating: '4.8',
+    rating: 4.8,
     type: 'house',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 12,
@@ -179,8 +202,10 @@ const placesToBook: Place[] = [
     bathrooms: 5,
     image: 'castle.jpg',
     availableFrom: '2023-12-15',
-    rating: '4.9',
+    rating: 4.9,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 13,
@@ -193,8 +218,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'lakeside.jpg',
     availableFrom: '2023-11-20',
-    rating: '4.5',
+    rating: 4.5,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 14,
@@ -207,8 +234,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'bohemian.jpg',
     availableFrom: '2023-11-18',
-    rating: '4.2',
+    rating: 4.2,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 15,
@@ -221,8 +250,10 @@ const placesToBook: Place[] = [
     bathrooms: 4,
     image: 'mansion.jpg',
     availableFrom: '2023-12-20',
-    rating: '4.8',
+    rating: 4.8,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 16,
@@ -235,8 +266,10 @@ const placesToBook: Place[] = [
     bathrooms: 2,
     image: 'lake-house.jpg',
     availableFrom: '2023-11-22',
-    rating: '4.6',
+    rating: 4.6,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 17,
@@ -249,8 +282,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'treehouse.jpg',
     availableFrom: '2023-11-19',
-    rating: '4.4',
+    rating: 4.4,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 18,
@@ -263,8 +298,10 @@ const placesToBook: Place[] = [
     bathrooms: 1.5,
     image: 'mountain-cabin.jpg',
     availableFrom: '2023-11-28',
-    rating: '4.7',
+    rating: 4.7,
     type: 'hotel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 19,
@@ -277,8 +314,10 @@ const placesToBook: Place[] = [
     bathrooms: 1,
     image: 'artistic-loft.jpg',
     availableFrom: '2023-11-25',
-    rating: '4.3',
+    rating: 4.3,
     type: 'hostel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
   {
     id: 20,
@@ -291,14 +330,16 @@ const placesToBook: Place[] = [
     bathrooms: 2,
     image: 'beachfront-condo.jpg',
     availableFrom: '2023-12-02',
-    rating: '4.6',
+    rating: 4.6,
     type: 'hostel',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti porro accusantium eveniet veritatis! Error beatae ex incidunt accusamus eius amet quod.',
   },
 ];
 
 const filtersFunctions = {
   rating: (rating: number) => {
-    return placesToBook.filter((place) => parseFloat(place.rating) >= rating);
+    return placesToBook.filter((place) => place.rating >= rating);
   },
   price: (min: number, max: number) => {
     return placesToBook.filter(
