@@ -68,16 +68,27 @@ const Home: FC = () => {
               onChange: (e) => setLocation(e.target.value),
             }}
             checkin={{
-              onChange: (_, dateString) => setCheckinDate(dateString),
+              value: checkInDate,
+              onChange: (_, dateString) => {
+                console.log(dateString);
+                setCheckinDate(dateString);
+              },
             }}
             checkout={{
-              onChange: (_, dateString) => setCheckoutDate(dateString),
+              value: checkOutDate,
+              onChange: (_, dateString) => {
+                console.log(dateString);
+                setCheckoutDate(dateString);
+              },
             }}
             guests={{
               value: guests,
               onChange: (e) => setGuests(e.target.value),
             }}
-            onClick={onSearch}
+            buttonProps={{
+              onClick: onSearch,
+              disabled: !location || !checkInDate || !checkOutDate || !guests,
+            }}
           />
         }
       />

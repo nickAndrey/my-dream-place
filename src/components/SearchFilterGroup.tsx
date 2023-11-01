@@ -1,4 +1,5 @@
 import { Button, DatePicker, DatePickerProps, Input } from 'antd';
+import dayjs from 'dayjs';
 import { CSSProperties, ChangeEvent, FC } from 'react';
 import { ReactComponent as CalendarIcon } from '../assets/icons/calendar.svg';
 import { ReactComponent as GuestsIcon } from '../assets/icons/guests.svg';
@@ -11,7 +12,10 @@ const SearchFilterGroupStyle: CSSProperties = {
   padding: '10px 12px',
   backgroundColor: '#fff',
   borderRadius: 8,
+  boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
 };
+
+const dateFormat = 'YYYY/MM/DD';
 
 type SearchFilterGroupProps = {
   destination: {
@@ -19,16 +23,21 @@ type SearchFilterGroupProps = {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   };
   checkin: {
+    value: string;
     onChange: DatePickerProps['onChange'];
   };
   checkout: {
+    value: string;
     onChange: DatePickerProps['onChange'];
   };
   guests: {
     value: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   };
-  onClick?: () => void;
+  buttonProps: {
+    onClick: () => void;
+    disabled: boolean;
+  };
 };
 
 const SearchFilterGroup: FC<SearchFilterGroupProps> = ({
@@ -36,7 +45,7 @@ const SearchFilterGroup: FC<SearchFilterGroupProps> = ({
   checkin,
   checkout,
   guests,
-  onClick,
+  buttonProps,
 }) => {
   return (
     <div style={SearchFilterGroupStyle}>
@@ -50,11 +59,15 @@ const SearchFilterGroup: FC<SearchFilterGroupProps> = ({
         placeholder='Check in date'
         onChange={checkin.onChange}
         suffixIcon={<CalendarIcon />}
+        value={checkin.value ? dayjs(checkin.value, dateFormat) : undefined}
+        format={dateFormat}
       />
       <DatePicker
         placeholder='Check out date'
         onChange={checkout.onChange}
         suffixIcon={<CalendarIcon />}
+        value={checkout.value ? dayjs(checkout.value, dateFormat) : undefined}
+        format={dateFormat}
       />
       <Input
         placeholder='Guests'
@@ -68,7 +81,11 @@ const SearchFilterGroup: FC<SearchFilterGroupProps> = ({
         pattern='[0-9]*'
       />
 
-      <Button type='primary' onClick={onClick}>
+      <Button
+        type='primary'
+        onClick={buttonProps.onClick}
+        disabled={buttonProps.disabled}
+      >
         Search
       </Button>
     </div>

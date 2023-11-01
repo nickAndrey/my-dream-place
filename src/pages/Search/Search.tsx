@@ -4,7 +4,7 @@ import { CSSProperties, FC, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 
-import convertObjectToQueryString from '../../utils/convertObjectToSearchQuery';
+import SearchFilterGroup from '../../components/SearchFilterGroup';
 import Filters from './Filters/Filters';
 import filtersData, { FilterType } from './Filters/filtersData';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
@@ -31,6 +31,10 @@ const Search: FC = () => {
   const [popular, setPopular] = useState<FilterType[]>([]);
   const [activities, setActivities] = useState<FilterType[]>([]);
   const [rating, setRating] = useState<number>(0);
+  const [locationToBook, setLocationToBook] = useState<string>('');
+  const [checkInDate, setCheckinDate] = useState<string>('');
+  const [checkOutDate, setCheckoutDate] = useState<string>('');
+  const [guests, setGuests] = useState<string>('');
 
   const [searchResults, setSearchResults] = useState(
     splitPlacesToBookIntoChunks(placesToBook, ITEMS_PER_PAGE)[0],
@@ -52,24 +56,41 @@ const Search: FC = () => {
   useEffect(() => {
     if (!location.state) return;
 
-    console.log(convertObjectToQueryString(location.state));
+    setLocationToBook(location.state.location);
+    setCheckinDate(location.state.checkInDate);
+    setCheckoutDate(location.state.checkOutDate);
+    setGuests(location.state.guests);
   }, [location]);
-
-  // TODO: make a request to the server to get the search results in real time
-  // useEffect(() => {
-  //   console.log(
-  //     convertObjectToQueryString({
-  //       search,
-  //       budget,
-  //       popular,
-  //       activities,
-  //       rating,
-  //     }),
-  //   );
-  // }, [search, budget, popular, activities, rating]);
 
   return (
     <div style={SearchContainerStyle}>
+      <Flex justify='center' style={{ gridColumn: '1/-1', padding: 12 }}>
+        <SearchFilterGroup
+          destination={{
+            value: locationToBook,
+            onChange: (e) => setLocationToBook(e.target.value),
+          }}
+          checkin={{
+            value: checkInDate,
+            onChange: (_, dateString) => setCheckinDate(dateString),
+          }}
+          checkout={{
+            value: checkOutDate,
+            onChange: (_, dateString) => setCheckoutDate(dateString),
+          }}
+          guests={{
+            value: guests,
+            onChange: (e) => setGuests(e.target.value),
+          }}
+          buttonProps={{
+            onClick: () => {
+              console.log('search');
+            },
+            disabled: !location || !checkInDate || !checkOutDate || !guests,
+          }}
+        />
+      </Flex>
+
       <Filters
         filters={filtersData}
         budget={budget}
