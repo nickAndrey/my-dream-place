@@ -1,10 +1,8 @@
 import { Button, Flex, Typography } from 'antd';
 import { CSSProperties, FC } from 'react';
 
-import { NavLink } from 'react-router-dom';
 import { ReactComponent as FacebookOutlined } from '../../assets/icons/facebook.svg';
 import { ReactComponent as GoogleOutlined } from '../../assets/icons/google.svg';
-import Path from '../../types/Path';
 
 const { Text } = Typography;
 
@@ -28,9 +26,7 @@ const ButtonStyle: CSSProperties = {
   gap: 10,
 };
 
-type SignInOptionsProps = {};
-
-const SignInOptions: FC<SignInOptionsProps> = ({}) => {
+const SignInOptions: FC = () => {
   return (
     <Flex vertical>
       <div style={TextStyle}>
@@ -55,11 +51,6 @@ const SignInOptions: FC<SignInOptionsProps> = ({}) => {
       >
         Sign in with Facebook
       </Button>
-
-      <Flex align='center' justify='center' gap='small'>
-        <Text>Don't have an account?</Text>
-        <NavLink to={Path.SignUp}>register</NavLink>
-      </Flex>
     </Flex>
   );
 };

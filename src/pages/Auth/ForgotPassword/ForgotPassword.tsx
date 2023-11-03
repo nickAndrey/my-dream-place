@@ -1,8 +1,6 @@
 import { FC } from 'react';
 
-type ForgotPasswordProps = {};
-
-const ForgotPassword: FC<ForgotPasswordProps> = ({}) => {
+const ForgotPassword: FC = () => {
   return <div>ForgotPassword</div>;
 };
 

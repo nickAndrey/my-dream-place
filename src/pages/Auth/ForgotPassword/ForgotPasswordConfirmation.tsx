@@ -1,10 +1,6 @@
 import { FC } from 'react';
 
-type ForgotPasswordConfirmationProps = {};
-
-const ForgotPasswordConfirmation: FC<
-  ForgotPasswordConfirmationProps
-> = ({}) => {
+const ForgotPasswordConfirmation: FC = () => {
   return <div>ForgotPasswordConfirmation</div>;
 };
 
