@@ -1,5 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
+import ForgotPassword from '../pages/Auth/ForgotPassword/ForgotPassword';
+import CreatePassword from '../pages/Auth/Register/CreatePassword';
+import Register from '../pages/Auth/Register/Register';
+import SignIn from '../pages/Auth/SignIn';
 import Home from '../pages/Home/Home';
 import Search from '../pages/Search/Search';
 import Path from '../types/Path';
@@ -50,15 +54,19 @@ const routerConfig = createBrowserRouter([
   },
   {
     path: Path.SignIn,
-    element: <div>Sign In</div>,
+    element: <SignIn />,
   },
   {
     path: Path.SignUp,
-    element: <div>Sign Up</div>,
+    element: <Register />,
+  },
+  {
+    path: Path.CreatePassword,
+    element: <CreatePassword />,
   },
   {
     path: Path.ForgotPassword,
-    element: <div>Forgot Password</div>,
+    element: <ForgotPassword />,
   },
 ]);
 

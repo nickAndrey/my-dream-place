@@ -11,6 +11,7 @@ enum Path {
   Activities = '/activities',
   About = '/about',
   Contact = '/contact',
+  CreatePassword = '/create-password',
 }
 
 export default Path;
