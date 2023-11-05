@@ -1,10 +1,11 @@
-import { Button, Flex, Menu } from 'antd';
+import { Menu } from 'antd';
 import { Header as HeaderContainer } from 'antd/es/layout/layout';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { ReactComponent as Logo } from '../assets/icons/myDreamPlaceLogo.svg';
-import { BASE_LAYOUT_WIDTH } from '../config/consts';
-import Path from '../types/Path';
+import { ReactComponent as Logo } from '../../assets/icons/myDreamPlaceLogo.svg';
+import { BASE_LAYOUT_WIDTH } from '../../config/consts';
+import Path from '../../types/Path';
+import UserDropdown from './UserDropdown';
 
 const items = [
   {
@@ -12,16 +13,8 @@ const items = [
     label: <NavLink to={Path.Home}>Home</NavLink>,
   },
   {
-    key: Path.Discover,
-    label: <NavLink to={Path.Discover}>Discover</NavLink>,
-  },
-  {
-    key: Path.Activities,
-    label: <NavLink to={Path.Activities}>Activities</NavLink>,
-  },
-  {
-    key: Path.About,
-    label: <NavLink to={Path.About}>About</NavLink>,
+    key: Path.Search,
+    label: <NavLink to={Path.Search}>Discover</NavLink>,
   },
   {
     key: Path.Contact,
@@ -70,12 +63,7 @@ const Header: FC = () => {
           selectedKeys={[activeKey]}
         />
 
-        <Flex align='center' gap='small'>
-          <Button size='middle'>Register</Button>
-          <Button size='middle' type='primary'>
-            Sign In
-          </Button>
-        </Flex>
+        <UserDropdown />
       </div>
     </HeaderContainer>
   );

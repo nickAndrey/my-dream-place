@@ -1,12 +1,16 @@
 import { Button, Checkbox, Flex, Form, Input, Typography } from 'antd';
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/auth';
 import Path from '../../types/Path';
 import AuthLayout from './AuthLayout';
 
 const { Text } = Typography;
 
 const SignIn: FC = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
   const bottomContent = (
     <Flex align='center' justify='center' gap='small'>
       <Text>Don't have an account?</Text>
@@ -16,7 +20,13 @@ const SignIn: FC = () => {
 
   return (
     <AuthLayout title='Sign In' bottomContent={bottomContent} withSignInOptions>
-      <Form layout='vertical' onFinish={(values) => console.log(values)}>
+      <Form
+        layout='vertical'
+        onFinish={(values) => {
+          login(values.email, values.password);
+          navigate(Path.Home);
+        }}
+      >
         <Form.Item
           label='Email'
           name='email'

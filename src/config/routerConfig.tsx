@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
+import ProtectedRoute from '../components/ProtectedRoute';
 import ForgotPassword from '../pages/Auth/ForgotPassword/ForgotPassword';
 import CreatePassword from '../pages/Auth/Register/CreatePassword';
 import Register from '../pages/Auth/Register/Register';
@@ -11,7 +12,11 @@ import Path from '../types/Path';
 const routerConfig = createBrowserRouter([
   {
     path: Path.Home,
-    element: <App />,
+    element: (
+      <ProtectedRoute>
+        <App />
+      </ProtectedRoute>
+    ),
     errorElement: <div>404 Not Found</div>,
     children: [
       {
@@ -31,24 +36,12 @@ const routerConfig = createBrowserRouter([
         element: <div>Booking Details</div>,
       },
       {
-        path: Path.BookingComplete,
-        element: <div>Booking Complete</div>,
-      },
-      {
-        path: Path.Discover,
-        element: <div>Discover</div>,
-      },
-      {
-        path: Path.Activities,
-        element: <div>Activities</div>,
-      },
-      {
-        path: Path.About,
-        element: <div>About</div>,
-      },
-      {
         path: Path.Contact,
         element: <div>Contact</div>,
+      },
+      {
+        path: Path.Trips,
+        element: <div>Trips</div>,
       },
     ],
   },

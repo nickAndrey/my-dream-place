@@ -17,7 +17,6 @@ type AuthContextType = {
   login: (email: string, password: string) => void;
   logout: () => void;
   setUserDetails: (details: Partial<User>) => void;
-  checkLoggedIn: () => boolean;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -43,11 +42,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     setUser({ ...user, ...details });
   };
 
-  const checkLoggedIn = () => {
-    const isLoggedIn = localStorage.getItem('loggedIn');
-    return isLoggedIn === 'true';
-  };
-
+  // Set user details in local storage on login
   useEffect(() => {
     if (user?.email && user?.password) {
       localStorage.setItem('loggedIn', 'true');
@@ -55,9 +50,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   }, [user]);
 
   return (
-    <AuthContext.Provider
-      value={{ user, login, logout, setUserDetails, checkLoggedIn }}
-    >
+    <AuthContext.Provider value={{ user, login, logout, setUserDetails }}>
       {children}
     </AuthContext.Provider>
   );
