@@ -1,6 +1,7 @@
 import { Button, Form, Input, Typography } from 'antd';
 import { FC } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../contexts/auth';
 import Path from '../../../types/Path';
 import AuthLayout from '../AuthLayout';
 
@@ -13,12 +14,14 @@ type FieldType = {
 
 const CreatePassword: FC = () => {
   const navigate = useNavigate();
+  const { setUserDetails } = useAuth();
 
   const onSubmit = (values: FieldType) => {
     if (values.password !== values.confirmPassword) {
       return;
     }
 
+    setUserDetails({ password: values.password });
     navigate(Path.Home);
   };
 

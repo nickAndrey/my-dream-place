@@ -1,6 +1,7 @@
 import { Button, Flex, Form, Input, Typography } from 'antd';
 import { FC } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../contexts/auth';
 import Path from '../../../types/Path';
 import AuthLayout from '../AuthLayout';
 
@@ -8,9 +9,11 @@ const { Text } = Typography;
 
 const Register: FC = () => {
   const navigate = useNavigate();
+  const { setUserDetails } = useAuth();
 
   const onSubmit = (values: any) => {
     if (values.email) {
+      setUserDetails({ email: values.email });
       navigate(Path.CreatePassword);
     }
   };
