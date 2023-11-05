@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import routerConfig from './config/routerConfig';
+import AuthProvider from './contexts/auth';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ConfigProvider>
-      <RouterProvider router={routerConfig} />
+      <AuthProvider>
+        <RouterProvider router={routerConfig} />
+      </AuthProvider>
     </ConfigProvider>
   </React.StrictMode>,
 );
