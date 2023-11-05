@@ -1,12 +1,20 @@
 import { Button, Flex, Form, Input, Typography } from 'antd';
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Path from '../../../types/Path';
 import AuthLayout from '../AuthLayout';
 
 const { Text } = Typography;
 
 const Register: FC = () => {
+  const navigate = useNavigate();
+
+  const onSubmit = (values: any) => {
+    if (values.email) {
+      navigate(Path.CreatePassword);
+    }
+  };
+
   const bottomContent = (
     <Flex align='center' justify='center' gap='small'>
       <Text>Already have an account?</Text>
@@ -20,7 +28,7 @@ const Register: FC = () => {
       bottomContent={bottomContent}
       withSignInOptions
     >
-      <Form layout='vertical' onFinish={(values) => console.log(values)}>
+      <Form layout='vertical' onFinish={onSubmit}>
         <Form.Item
           label='Email'
           name='email'
