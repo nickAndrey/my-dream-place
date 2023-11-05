@@ -1,6 +1,6 @@
 import { Button, Form, Input, Typography } from 'antd';
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Path from '../../../types/Path';
 import AuthLayout from '../AuthLayout';
 
@@ -12,16 +12,14 @@ type FieldType = {
 };
 
 const CreatePassword: FC = () => {
+  const navigate = useNavigate();
+
   const onSubmit = (values: FieldType) => {
     if (values.password !== values.confirmPassword) {
       return;
     }
 
-    console.log(values);
-  };
-
-  const onSubmitFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
+    navigate(Path.Home);
   };
 
   const bottomContent = (
@@ -39,11 +37,7 @@ const CreatePassword: FC = () => {
         and numbers.
       </Text>
 
-      <Form
-        layout='vertical'
-        onFinish={onSubmit}
-        onFinishFailed={onSubmitFailed}
-      >
+      <Form layout='vertical' onFinish={onSubmit}>
         <Form.Item<FieldType>
           label='Password'
           name='password'
