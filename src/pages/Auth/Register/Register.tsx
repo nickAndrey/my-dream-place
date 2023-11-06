@@ -13,8 +13,9 @@ const Register: FC = () => {
 
   const onSubmit = (values: any) => {
     if (values.email) {
-      setUserDetails({ email: values.email });
-      navigate(Path.CreatePassword);
+      setUserDetails({ email: values.email }).then(() => {
+        navigate(Path.CreatePassword);
+      });
     }
   };
 

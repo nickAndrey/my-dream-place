@@ -21,8 +21,9 @@ const CreatePassword: FC = () => {
       return;
     }
 
-    setUserDetails({ password: values.password });
-    navigate(Path.Home);
+    setUserDetails({ password: values.password }).then(() => {
+      navigate(Path.Home);
+    });
   };
 
   const bottomContent = (
