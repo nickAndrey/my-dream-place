@@ -5,10 +5,12 @@ import { useLocation } from 'react-router-dom';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 
 import SearchFilterGroup from '../../components/SearchFilterGroup';
+import stubData from '../../stub-data/stub-data.json';
+import Listing from '../../types/Listing';
+import splitArrayIntoChunks from '../../utils/splitArrayIntoChunks';
 import Filters from './Filters/Filters';
 import filtersData, { FilterType } from './Filters/filtersData';
 import SearchResultItem from './SearchResultItem/SearchResultItem';
-import placesToBook, { splitPlacesToBookIntoChunks } from './placesData';
 
 const { Title } = Typography;
 
@@ -21,7 +23,7 @@ const SearchContainerStyle: CSSProperties = {
   gap: 30,
 };
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 2;
 
 const Search: FC = () => {
   const location = useLocation();
@@ -36,19 +38,19 @@ const Search: FC = () => {
   const [checkOutDate, setCheckoutDate] = useState<string>('');
   const [guests, setGuests] = useState<string>('');
 
-  const [searchResults, setSearchResults] = useState(
-    splitPlacesToBookIntoChunks(placesToBook, ITEMS_PER_PAGE)[0],
+  const [searchResults, setSearchResults] = useState<Listing[]>(
+    splitArrayIntoChunks(stubData, 2)[0],
   );
 
   const onLoadMoreResults = () => {
     const currentChunkIndex = Math.ceil(searchResults.length / ITEMS_PER_PAGE);
 
-    const nextChunk = splitPlacesToBookIntoChunks(placesToBook, ITEMS_PER_PAGE)[
+    const nextChunk = splitArrayIntoChunks(stubData, ITEMS_PER_PAGE)[
       currentChunkIndex
     ];
 
     if (!nextChunk) return;
-
+    setSearchResults((prevResults) => [...prevResults, ...nextChunk]);
     setSearchResults([...searchResults, ...nextChunk]);
   };
 
@@ -113,13 +115,13 @@ const Search: FC = () => {
         {searchResults.map((place) => (
           <SearchResultItem
             key={place.id}
-            title={place.name}
+            title={place.title}
             rating={place.rating}
             description={place.description}
             price={place.price}
             duration={2}
-            location={place.location}
-            image={place.image}
+            location={place.address.city}
+            image={place.images[0]}
             onItemClicked={() => {}}
           />
         ))}

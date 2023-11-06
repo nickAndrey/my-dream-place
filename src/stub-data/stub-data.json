@@ -1,0 +1,247 @@
+[
+  {
+    "id": "1",
+    "title": "Cozy Apartment in the Heart of the City",
+    "description": "A comfortable and well-furnished apartment in a prime location.",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "street": "123 Main Street"
+    },
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.006
+    },
+    "price": 150,
+    "currency": "USD",
+    "amenities": ["Wi-Fi", "Air Conditioning", "Kitchen", "TV"],
+    "facilities": ["Swimming Pool", "Gym", "Parking"],
+    "images": [
+      "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q296eSUyMEFwYXJ0bWVudCUyMGluJTIwdGhlJTIwSGVhcnQlMjBvZiUyMHRoZSUyMENpdHl8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1496871455396-14e56815f1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q296eSUyMEFwYXJ0bWVudCUyMGluJTIwdGhlJTIwSGVhcnQlMjBvZiUyMHRoZSUyMENpdHl8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Q296eSUyMEFwYXJ0bWVudCUyMGluJTIwdGhlJTIwSGVhcnQlMjBvZiUyMHRoZSUyMENpdHl8ZW58MHx8MHx8fDA%3D"
+    ],
+    "host": {
+      "id": "101",
+      "name": "John Doe",
+      "profile_picture": "host_image.jpg",
+      "superhost": true
+    },
+    "rating": 4.8,
+    "date_listed": "2023-11-06",
+    "availability": true,
+    "reviews": {
+      "review": [
+        {
+          "id": "r1",
+          "reviewer": {
+            "id": "201",
+            "name": "Alice Johnson",
+            "profile_picture": "alice.jpg"
+          },
+          "date": "2023-11-08",
+          "content": "Great place to stay!"
+        },
+        {
+          "id": "r2",
+          "reviewer": {
+            "id": "202",
+            "name": "Bob Smith",
+            "profile_picture": "bob.jpg"
+          },
+          "date": "2023-11-10",
+          "content": "Excellent location and amenities."
+        }
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "title": "Beachfront Villa with Stunning Ocean Views",
+    "description": "A luxurious beachfront villa with breathtaking ocean views.",
+    "address": {
+      "city": "Malibu",
+      "state": "CA",
+      "country": "USA",
+      "street": "456 Beachfront Drive"
+    },
+    "coordinates": {
+      "latitude": 34.0259,
+      "longitude": -118.7798
+    },
+    "price": 500,
+    "currency": "USD",
+    "amenities": ["Private Beach Access", "Infinity Pool", "Spa", "BBQ Grill"],
+    "facilities": ["Private Parking", "Security", "Gated Community"],
+    "images": [
+      "https://images.unsplash.com/photo-1618807963539-959eec192dce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmlsbGElMjB3aXRoJTIwT2NlYW4lMjBWaWV3c3xlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1661963019189-d9dbb233822b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmlsbGElMjB3aXRoJTIwT2NlYW4lMjBWaWV3c3xlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1562131470-af37433ba70c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VmlsbGElMjB3aXRoJTIwT2NlYW4lMjBWaWV3c3xlbnwwfHwwfHx8MA%3D%3D"
+    ],
+    "host": {
+      "id": "102",
+      "name": "Emily Adams",
+      "profile_picture": "emily.jpg",
+      "superhost": true
+    },
+    "rating": 4.9,
+    "date_listed": "2023-11-07",
+    "availability": true,
+    "reviews": {
+      "review": [
+        {
+          "id": "r3",
+          "reviewer": {
+            "id": "203",
+            "name": "David Wilson",
+            "profile_picture": "david.jpg"
+          },
+          "date": "2023-11-09",
+          "content": "Paradise on Earth!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "title": "Mountain Cabin Retreat",
+    "description": "A rustic cabin in the mountains for a peaceful getaway.",
+    "address": {
+      "city": "Aspen",
+      "state": "CO",
+      "country": "USA",
+      "street": "789 Mountain Road"
+    },
+    "coordinates": {
+      "latitude": 39.1911,
+      "longitude": -106.8175
+    },
+    "price": 200,
+    "currency": "USD",
+    "amenities": ["Fireplace", "Hiking Trails", "Hot Tub", "Wooden Deck"],
+    "facilities": ["Parking", "Outdoor Grill", "Pet-Friendly"],
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1686090450574-214118216bdc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QSUyMHJ1c3RpYyUyMGNhYmluJTIwaW4lMjB0aGUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QSUyMHJ1c3RpYyUyMGNhYmluJTIwaW4lMjB0aGUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1685133856065-a32643cc56d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8QSUyMHJ1c3RpYyUyMGNhYmluJTIwaW4lMjB0aGUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D"
+    ],
+    "host": {
+      "id": "103",
+      "name": "Sarah Turner",
+      "profile_picture": "sarah.jpg",
+      "superhost": true
+    },
+    "rating": 4.7,
+    "date_listed": "2023-11-08",
+    "availability": true,
+    "reviews": {
+      "review": [
+        {
+          "id": "r4",
+          "reviewer": {
+            "id": "204",
+            "name": "Michael Brown",
+            "profile_picture": "michael.jpg"
+          },
+          "date": "2023-11-10",
+          "content": "A peaceful escape in the mountains."
+        }
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "title": "Downtown Loft with City Views",
+    "description": "A stylish loft apartment with stunning city views.",
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA",
+      "street": "567 Downtown Avenue"
+    },
+    "coordinates": {
+      "latitude": 41.8781,
+      "longitude": -87.6298
+    },
+    "price": 180,
+    "currency": "USD",
+    "amenities": ["Urban Loft Design", "Balcony", "Gym", "Coffee Shop Nearby"],
+    "facilities": ["Parking Garage", "24/7 Security"],
+    "images": [
+      "https://images.unsplash.com/photo-1605283176568-9b41fde3672e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fERvd250b3duJTIwTG9mdHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1559941003-4f656f95b734?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RG93bnRvd24lMjBMb2Z0fGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1607570799395-b968ad047e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RG93bnRvd24lMjBMb2Z0fGVufDB8fDB8fHww"
+    ],
+    "host": {
+      "id": "104",
+      "name": "James Taylor",
+      "profile_picture": "james.jpg",
+      "superhost": false
+    },
+    "rating": 4.6,
+    "date_listed": "2023-11-09",
+    "availability": true,
+    "reviews": {
+      "review": [
+        {
+          "id": "r5",
+          "reviewer": {
+            "id": "205",
+            "name": "Linda Hall",
+            "profile_picture": "linda.jpg"
+          },
+          "date": "2023-11-11",
+          "content": "Amazing views and convenient location."
+        }
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "title": "Historic Cottage in the Countryside",
+    "description": "A charming historic cottage surrounded by nature.",
+    "address": {
+      "city": "Cotswolds",
+      "state": "England",
+      "country": "UK",
+      "street": "101 Cottage Lane"
+    },
+    "coordinates": {
+      "latitude": 51.8787,
+      "longitude": -1.5265
+    },
+    "price": 120,
+    "currency": "GBP",
+    "amenities": ["Garden", "Fireplace", "Scenic Views", "Traditional Decor"],
+    "facilities": ["Parking", "Pet-Friendly"],
+    "images": [
+      "https://images.unsplash.com/photo-1570127828934-c60aa3e1e5af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QSUyMGNoYXJtaW5nJTIwaGlzdG9yaWMlMjBjb3R0YWdlfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1592212671263-5da5627c5819?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QSUyMGNoYXJtaW5nJTIwaGlzdG9yaWMlMjBjb3R0YWdlfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEElMjBjaGFybWluZyUyMGhpc3RvcmljJTIwY290dGFnZXxlbnwwfHwwfHx8MA%3D%3D"
+    ],
+    "host": {
+      "id": "105",
+      "name": "Eleanor Wilson",
+      "profile_picture": "eleanor.jpg",
+      "superhost": true
+    },
+    "rating": 4.9,
+    "date_listed": "2023-11-10",
+    "availability": true,
+    "reviews": {
+      "review": [
+        {
+          "id": "r6",
+          "reviewer": {
+            "id": "206",
+            "name": "Peter Thompson",
+            "profile_picture": "peter.jpg"
+          },
+          "date": "2023-11-12",
+          "content": "A truly enchanting place."
+        }
+      ]
+    }
+  }
+]
