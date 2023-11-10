@@ -2,6 +2,7 @@ type Listing = {
   id: string;
   title: string;
   description: string;
+  overview: string;
   address: {
     city: string;
     state: string;
@@ -15,7 +16,11 @@ type Listing = {
   price: number;
   currency: string;
   amenities: string[];
-  facilities: string[];
+  facilities: {
+    id: string;
+    name: string;
+    label: string;
+  }[];
   images: string[];
   host: {
     id: string;

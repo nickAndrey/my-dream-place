@@ -1,12 +1,13 @@
 import { Button, Flex, Typography } from 'antd';
 import { CSSProperties, FC, useEffect, useState } from 'react';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { BASE_LAYOUT_WIDTH } from '../../config/consts';
 
 import SearchFilterGroup from '../../components/SearchFilterGroup';
 import stubData from '../../stub-data/stub-data.json';
 import Listing from '../../types/Listing';
+import Path from '../../types/Path';
 import splitArrayIntoChunks from '../../utils/splitArrayIntoChunks';
 import Filters from './Filters/Filters';
 import filtersData, { FilterType } from './Filters/filtersData';
@@ -23,10 +24,11 @@ const SearchContainerStyle: CSSProperties = {
   gap: 30,
 };
 
-const ITEMS_PER_PAGE = 2;
+const ITEMS_PER_PAGE = 3;
 
 const Search: FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [search, setSearch] = useState<string>('');
   const [budget, setBudget] = useState<FilterType[]>([]);
@@ -39,7 +41,7 @@ const Search: FC = () => {
   const [guests, setGuests] = useState<string>('');
 
   const [searchResults, setSearchResults] = useState<Listing[]>(
-    splitArrayIntoChunks(stubData, 2)[0],
+    splitArrayIntoChunks(stubData, ITEMS_PER_PAGE)[0],
   );
 
   const onLoadMoreResults = () => {
@@ -122,7 +124,12 @@ const Search: FC = () => {
             duration={2}
             location={place.address.city}
             image={place.images[0]}
-            onItemClicked={() => {}}
+            onItemClicked={() => {
+              const titleAsPath = place.title.replace(/\s/g, '-').toLowerCase();
+              navigate(`${Path.Search}/${titleAsPath}`, {
+                state: { id: place.id },
+              });
+            }}
           />
         ))}
 

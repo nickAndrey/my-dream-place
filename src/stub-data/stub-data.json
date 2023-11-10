@@ -3,6 +3,7 @@
     "id": "1",
     "title": "Cozy Apartment in the Heart of the City",
     "description": "A comfortable and well-furnished apartment in a prime location.",
+    "overview": "Featuring free WiFi throughout the property, Lakeside Motel Waterfront offers accommodations in Lakes Entrance, 19 mi from Bairnsdale. Free private parking is available on site.\nEach room at this motel is air conditioned and comes with a flat-screen TV. You will find a kettle, toaster and a microwave in the room. Each room is fitted with a private bathroom. Guests have access to barbecue facilities and a lovely large lawn area. Metung is 6.8 mi from Lakeside Motel Waterfront, while Paynesville is 14 mi from the property.\nCouples in particular like the location – they rated it 9.2 for a two-person trip.",
     "address": {
       "city": "New York",
       "state": "NY",
@@ -16,7 +17,38 @@
     "price": 150,
     "currency": "USD",
     "amenities": ["Wi-Fi", "Air Conditioning", "Kitchen", "TV"],
-    "facilities": ["Swimming Pool", "Gym", "Parking"],
+    "facilities": [
+      {
+        "id": "f1",
+        "label": "parking-available",
+        "name": "Parking Available"
+      },
+      {
+        "id": "f2",
+        "label": "air-conditioning",
+        "name": "Air Conditioning"
+      },
+      {
+        "id": "f3",
+        "label": "business-services",
+        "name": "Business Services"
+      },
+      {
+        "id": "f4",
+        "label": "swimming-pool",
+        "name": "Swimming Pool"
+      },
+      {
+        "id": "f5",
+        "label": "top-rated-in-area",
+        "name": "Top Rated in Area"
+      },
+      {
+        "id": "f6",
+        "label": "free-wifi",
+        "name": "Free WiFi"
+      }
+    ],
     "images": [
       "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q296eSUyMEFwYXJ0bWVudCUyMGluJTIwdGhlJTIwSGVhcnQlMjBvZiUyMHRoZSUyMENpdHl8ZW58MHx8MHx8fDA%3D",
       "https://images.unsplash.com/photo-1496871455396-14e56815f1f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q296eSUyMEFwYXJ0bWVudCUyMGluJTIwdGhlJTIwSGVhcnQlMjBvZiUyMHRoZSUyMENpdHl8ZW58MHx8MHx8fDA%3D",
@@ -60,6 +92,7 @@
     "id": "2",
     "title": "Beachfront Villa with Stunning Ocean Views",
     "description": "A luxurious beachfront villa with breathtaking ocean views.",
+    "overview": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ratione amet repellendus, maiores nam delectus debitis sunt, pariatur, nostrum ad assumenda. Ipsam, ad nam sapiente fugiat in dolores quod. Porro?",
     "address": {
       "city": "Malibu",
       "state": "CA",
@@ -73,7 +106,38 @@
     "price": 500,
     "currency": "USD",
     "amenities": ["Private Beach Access", "Infinity Pool", "Spa", "BBQ Grill"],
-    "facilities": ["Private Parking", "Security", "Gated Community"],
+    "facilities": [
+      {
+        "id": "f1",
+        "label": "parking-available",
+        "name": "Parking Available"
+      },
+      {
+        "id": "f2",
+        "label": "air-conditioning",
+        "name": "Air Conditioning"
+      },
+      {
+        "id": "f3",
+        "label": "business-services",
+        "name": "Business Services"
+      },
+      {
+        "id": "f4",
+        "label": "swimming-pool",
+        "name": "Swimming Pool"
+      },
+      {
+        "id": "f5",
+        "label": "top-rated-in-area",
+        "name": "Top Rated in Area"
+      },
+      {
+        "id": "f6",
+        "label": "free-wifi",
+        "name": "Free WiFi"
+      }
+    ],
     "images": [
       "https://images.unsplash.com/photo-1618807963539-959eec192dce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VmlsbGElMjB3aXRoJTIwT2NlYW4lMjBWaWV3c3xlbnwwfHwwfHx8MA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1661963019189-d9dbb233822b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmlsbGElMjB3aXRoJTIwT2NlYW4lMjBWaWV3c3xlbnwwfHwwfHx8MA%3D%3D",
@@ -107,6 +171,7 @@
     "id": "3",
     "title": "Mountain Cabin Retreat",
     "description": "A rustic cabin in the mountains for a peaceful getaway.",
+    "overview": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ratione amet repellendus, maiores nam delectus debitis sunt, pariatur, nostrum ad assumenda. Ipsam, ad nam sapiente fugiat in dolores quod. Porro?",
     "address": {
       "city": "Aspen",
       "state": "CO",
@@ -120,7 +185,38 @@
     "price": 200,
     "currency": "USD",
     "amenities": ["Fireplace", "Hiking Trails", "Hot Tub", "Wooden Deck"],
-    "facilities": ["Parking", "Outdoor Grill", "Pet-Friendly"],
+    "facilities": [
+      {
+        "id": "f1",
+        "label": "parking-available",
+        "name": "Parking Available"
+      },
+      {
+        "id": "f2",
+        "label": "air-conditioning",
+        "name": "Air Conditioning"
+      },
+      {
+        "id": "f3",
+        "label": "business-services",
+        "name": "Business Services"
+      },
+      {
+        "id": "f4",
+        "label": "swimming-pool",
+        "name": "Swimming Pool"
+      },
+      {
+        "id": "f5",
+        "label": "top-rated-in-area",
+        "name": "Top Rated in Area"
+      },
+      {
+        "id": "f6",
+        "label": "free-wifi",
+        "name": "Free WiFi"
+      }
+    ],
     "images": [
       "https://plus.unsplash.com/premium_photo-1686090450574-214118216bdc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QSUyMHJ1c3RpYyUyMGNhYmluJTIwaW4lMjB0aGUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D",
       "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QSUyMHJ1c3RpYyUyMGNhYmluJTIwaW4lMjB0aGUlMjBtb3VudGFpbnxlbnwwfHwwfHx8MA%3D%3D",
@@ -154,6 +250,7 @@
     "id": "4",
     "title": "Downtown Loft with City Views",
     "description": "A stylish loft apartment with stunning city views.",
+    "overview": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ratione amet repellendus, maiores nam delectus debitis sunt, pariatur, nostrum ad assumenda. Ipsam, ad nam sapiente fugiat in dolores quod. Porro?",
     "address": {
       "city": "Chicago",
       "state": "IL",
@@ -167,7 +264,38 @@
     "price": 180,
     "currency": "USD",
     "amenities": ["Urban Loft Design", "Balcony", "Gym", "Coffee Shop Nearby"],
-    "facilities": ["Parking Garage", "24/7 Security"],
+    "facilities": [
+      {
+        "id": "f1",
+        "label": "parking-available",
+        "name": "Parking Available"
+      },
+      {
+        "id": "f2",
+        "label": "air-conditioning",
+        "name": "Air Conditioning"
+      },
+      {
+        "id": "f3",
+        "label": "business-services",
+        "name": "Business Services"
+      },
+      {
+        "id": "f4",
+        "label": "swimming-pool",
+        "name": "Swimming Pool"
+      },
+      {
+        "id": "f5",
+        "label": "top-rated-in-area",
+        "name": "Top Rated in Area"
+      },
+      {
+        "id": "f6",
+        "label": "free-wifi",
+        "name": "Free WiFi"
+      }
+    ],
     "images": [
       "https://images.unsplash.com/photo-1605283176568-9b41fde3672e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fERvd250b3duJTIwTG9mdHxlbnwwfHwwfHx8MA%3D%3D",
       "https://images.unsplash.com/photo-1559941003-4f656f95b734?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RG93bnRvd24lMjBMb2Z0fGVufDB8fDB8fHww",
@@ -201,6 +329,7 @@
     "id": "5",
     "title": "Historic Cottage in the Countryside",
     "description": "A charming historic cottage surrounded by nature.",
+    "overview": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ratione amet repellendus, maiores nam delectus debitis sunt, pariatur, nostrum ad assumenda. Ipsam, ad nam sapiente fugiat in dolores quod. Porro?",
     "address": {
       "city": "Cotswolds",
       "state": "England",
@@ -214,7 +343,38 @@
     "price": 120,
     "currency": "GBP",
     "amenities": ["Garden", "Fireplace", "Scenic Views", "Traditional Decor"],
-    "facilities": ["Parking", "Pet-Friendly"],
+    "facilities": [
+      {
+        "id": "f1",
+        "label": "parking-available",
+        "name": "Parking Available"
+      },
+      {
+        "id": "f2",
+        "label": "air-conditioning",
+        "name": "Air Conditioning"
+      },
+      {
+        "id": "f3",
+        "label": "business-services",
+        "name": "Business Services"
+      },
+      {
+        "id": "f4",
+        "label": "swimming-pool",
+        "name": "Swimming Pool"
+      },
+      {
+        "id": "f5",
+        "label": "top-rated-in-area",
+        "name": "Top Rated in Area"
+      },
+      {
+        "id": "f6",
+        "label": "free-wifi",
+        "name": "Free WiFi"
+      }
+    ],
     "images": [
       "https://images.unsplash.com/photo-1570127828934-c60aa3e1e5af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QSUyMGNoYXJtaW5nJTIwaGlzdG9yaWMlMjBjb3R0YWdlfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1592212671263-5da5627c5819?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QSUyMGNoYXJtaW5nJTIwaGlzdG9yaWMlMjBjb3R0YWdlfGVufDB8fDB8fHww",

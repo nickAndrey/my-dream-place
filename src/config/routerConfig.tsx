@@ -7,6 +7,7 @@ import Register from '../pages/Auth/Register/Register';
 import SignIn from '../pages/Auth/SignIn';
 import Home from '../pages/Home/Home';
 import Search from '../pages/Search/Search';
+import SearchDetails from '../pages/SearchDetails/SearchDetails';
 import Path from '../types/Path';
 
 const routerConfig = createBrowserRouter([
@@ -25,7 +26,16 @@ const routerConfig = createBrowserRouter([
       },
       {
         path: Path.Search,
-        element: <Search />,
+        children: [
+          {
+            element: <Search />,
+            index: true,
+          },
+          {
+            path: ':searchId',
+            element: <SearchDetails />,
+          },
+        ],
       },
       {
         path: Path.Checkout,

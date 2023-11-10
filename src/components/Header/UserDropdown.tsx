@@ -1,4 +1,4 @@
-import { Dropdown } from 'antd';
+import { Avatar, Dropdown } from 'antd';
 import { FC } from 'react';
 
 import { ReactComponent as AccountIcon } from '../../assets/icons/account.svg';
@@ -51,13 +51,18 @@ const UserDropdown: FC = () => {
 
   return (
     <Dropdown menu={{ items }} trigger={['click']}>
-      <button style={{ border: 'none', background: 'none', cursor: 'pointer' }}>
-        <img
-          src={userAvatar}
-          alt={userAvatar}
-          style={{ width: '100%', objectFit: 'cover' }}
-        />
-      </button>
+      <Avatar
+        shape='circle'
+        size='large'
+        icon={
+          <img
+            src={userAvatar}
+            alt={userAvatar}
+            style={{ width: '100%', objectFit: 'cover' }}
+          />
+        }
+        style={{ cursor: 'pointer' }}
+      />
     </Dropdown>
   );
 };
