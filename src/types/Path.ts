@@ -6,7 +6,6 @@ enum Path {
   SignIn = '/sign-in',
   SignUp = '/sign-up',
   ForgotPassword = '/forgot-password',
-  Contact = '/contact',
   CreatePassword = '/create-password',
   Trips = '/trips',
 }

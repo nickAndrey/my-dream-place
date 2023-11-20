@@ -16,10 +16,6 @@ const items = [
     key: Path.Search,
     label: <NavLink to={Path.Search}>Discover</NavLink>,
   },
-  {
-    key: Path.Contact,
-    label: <NavLink to={Path.Contact}>Contact</NavLink>,
-  },
 ];
 
 const HeaderStyle: CSSProperties = {
@@ -61,6 +57,7 @@ const Header: FC = () => {
           mode='horizontal'
           items={items}
           selectedKeys={[activeKey]}
+          disabledOverflow
         />
 
         <UserDropdown />

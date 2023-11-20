@@ -46,10 +46,6 @@ const routerConfig = createBrowserRouter([
         element: <div>Booking Details</div>,
       },
       {
-        path: Path.Contact,
-        element: <div>Contact</div>,
-      },
-      {
         path: Path.Trips,
         element: <div>Trips</div>,
       },
